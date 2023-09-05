@@ -23,15 +23,15 @@ skin: "/assets/css/skins/dark.css" #available: light.css, default.css, dark.css
 
 title: Sebastien Modley
 email: sebmodley@gmail.com
-description:  # this means to ignore newlines until "baseurl:"
-  
+description:   # this means to ignore newlines until "baseurl:"
   '
-    Portfolio website. Welcome, feel free to have a look around! 
+    Portfolio website.<br>
+    Welcome, feel free to have a look around!
   '
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://daedrakyne.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-logo: "/assets/images/logo.jpg" # path of site logo, e.g. "/assets/images/logo.png"
+logo: "/images/logo.jpg" # path of site logo, e.g. "/assets/images/logo.png"
 github_username:  daedrakyne
 date_format: "%Y-%m-%d"
 
@@ -69,7 +69,7 @@ tag_archive_path: "/tags/#"
 author:
   name: Sebastien Modley
   twitter: 
-  picture: /assets/images/logo.jpg
+  picture: /images/logo.jpg
 
 
 footer_links:
@@ -81,6 +81,33 @@ footer_links:
     icon: fas fa-rss-square
 
 copyright: "@2023 Sebastien Modley."
+
+
+
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
+  defaults:
+    # # Post defaults
+    # - scope:
+    #     path: "_posts"
+    #     type: posts
+    #   values:
+    #     layout: post
+    #     comments: true
+    #     share: true
+    # Projects defaults
+    - scope:
+        path: "_projects"
+        type: projects
+      values:
+        layout: post
+        comments: false
+        share: true
+
 
 
 # Exclude from processing.

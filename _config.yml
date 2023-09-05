@@ -18,22 +18,70 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+locale: en-gb
+skin: "/assets/css/skins/dark.css" #available: light.css, default.css, dark.css
+
+title: Sebastien Modley
+email: sebmodley@gmail.com
+description:  # this means to ignore newlines until "baseurl:"
+  
+  '
+    Portfolio website. Welcome, feel free to have a look around! 
+  '
+
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "https://daedrakyne.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/images/logo.jpg" # path of site logo, e.g. "/assets/images/logo.png"
+github_username:  daedrakyne
+date_format: "%Y-%m-%d"
+
 
 # Build settings
 # theme: minima
 remote_theme: "mmistakes/so-simple-theme@3.2.0"
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/page:num/"
+
+mathjax:
+  enable: true             # MathJax equations, e.g. true, false (default)
+  combo: "tex-svg"         # "tex-svg" (default), "tex-mml-chtml", etc.
+  tags: "ams"              # "none", "ams" (default), "all"
+
+# Use by replace the font name and weights across the site accordingly.
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+
+
+search_full_content: true
+
+
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
+
+author:
+  name: Sebastien Modley
+  twitter: 
+  picture: /assets/images/logo.jpg
+
+
+footer_links:
+  - title: GitHub
+    url: https://github.com/DaedraKyne/
+    icon: fab fa-github-square
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
+
+copyright: "@2023 Sebastien Modley."
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

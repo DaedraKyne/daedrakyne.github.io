@@ -83,9 +83,6 @@ footer_links:
   - title: GitHub
     url: https://github.com/DaedraKyne/
     icon: fab fa-github-square
-  - title: Feed
-    url: atom.xml
-    icon: fas fa-rss-square
 
 copyright: "@2023 Sebastien Modley."
 

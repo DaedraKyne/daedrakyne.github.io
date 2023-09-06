@@ -13,7 +13,7 @@ links: [
 image:
   path: /images/pixelot.png
   thumbnail: /images/pixelot-384x231.png
-    autoplay: true
+  autoplay: true
 
 
 slideshow: [

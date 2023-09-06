@@ -18,6 +18,7 @@ image:
 
 slideshow: [
   {image: {path: /images/pixelot.png}},
+  {image: {type: video, path: /images/pixel-game.mp4, autoplay: true}},
   
 ]
 #   caption: "[Pixelot](https://github.com/SLYGM/Pixelot) engine UI"

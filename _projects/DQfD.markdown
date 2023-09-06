@@ -6,7 +6,8 @@ categories: Python AI Deep-Learning
 year: "2021-2022"
 importance: 4
 links: [
-  {name: Final report, href: https://drive.google.com/file/d/1FEpNo7-92uGZv6gBoDTsEIz4tg0XtvTf/view?usp=drive_link},
+  {name: Final report, href: "https://drive.google.com/file/d/1FEpNo7-92uGZv6gBoDTsEIz4tg0XtvTf/view?usp=drive_link"},
+  {name: Github repo, href: https://github.com/SLYGM/Pixelot},
 ]
 
 image:

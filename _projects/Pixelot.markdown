@@ -11,8 +11,9 @@ links: [
 ]
 
 image:
+  type: video
   path: /images/pixel-game.mp4
-  thumbnail: /images/pixelot-384x231.png
+  thumbnail: /images/pixel-game.mp4
   autoplay: true
 
 

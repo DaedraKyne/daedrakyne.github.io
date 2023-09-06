@@ -1,5 +1,5 @@
 ---
-title: 'University of Warwick - MEng Computer Science -- 2:1 Hons'
+title: 'University of Warwick - MEng Computer Science'
 date: 2019-09-01 00:00:00 -0700
 enddate: 2023-07-01 00:00:00 -0700
 grade: 2:1 Hons

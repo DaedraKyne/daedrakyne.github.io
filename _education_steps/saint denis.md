@@ -1,5 +1,5 @@
 ---
-title: French Science Baccalaureate - 1st-Class Hons
+title: French Science Baccalaureate
 subtitle: (St Denis International School, Lycee Francais Charles Lepierre)
 date: 2010-09-01 00:00:00 -0700
 enddate: 2019-07-01 00:00:00 -0700

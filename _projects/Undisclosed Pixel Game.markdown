@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Undisclosed Pixel Game
+title: GPU Pixel Simulations
 project-type: 4th-Year Thesis Project
 categories: C# GLSL(Shader-Programming) Unity
 year: 2023
@@ -26,4 +26,5 @@ slideshow: [
 
 ---
 
-Pixel-Simulated Game inspired by Noita and Minecraft. (top-down)
+Solo-made Pixel-Simulated Game running on the GPU, inspired by Noita and Minecraft. (top-down)<br>
+Main tech used is compute shaders, to ensure high efficiency with large maps.

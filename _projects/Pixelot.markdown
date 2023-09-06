@@ -16,7 +16,13 @@ image:
   autoplay: true
 #   caption: "[Pixelot](https://github.com/SLYGM/Pixelot) engine UI"
 
+slideshow: [
+  {image: {type: video, path: /images/pixelot-shooter-example.mp4, autoplay: true}},
+  {image: {path: /images/pixelot.png, autoplay: true}},
+]
+
 ---
 
 Game Engine written in TypeScript for fast Retro-styled game dev.<br>
+Includes Add-On/Plugin capability, Shader support, Object-Oriented and DOTS design (inspired by Unity).
 

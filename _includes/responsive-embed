@@ -14,5 +14,5 @@
 {% assign image_style = image_style | "" %}
 
 <div style="{{ image_style }}" class="responsive-embed {{ ratio_class }}">
-  <iframe style="{{ image_style }}" src="{{ include.url }}" frameborder="0" allowfullscreen></iframe>
+  <iframe style="{{ image_style }}" src="{{ include.url }}" allowfullscreen></iframe>
 </div>

@@ -11,7 +11,7 @@ links: [
 ]
 
 image:
-  path: /images/pixelot.png
+  path: /images/pixel-game.mp4
   thumbnail: /images/pixelot-384x231.png
   autoplay: true
 

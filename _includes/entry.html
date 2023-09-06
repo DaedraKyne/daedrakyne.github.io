@@ -14,23 +14,19 @@
       {% endif %}
     </h3>
     {% if entry.image.thumbnail %}
+
+
       {% assign entry_image = entry.image.thumbnail %}
       {% unless entry_image contains '://' %}
         {% assign entry_image = entry_image | relative_url %}
       {% endunless %}
       {% assign entry_image = entry_image | escape %}
       
+      {% assign image = entry.image %}
+      {% assign image_path = entry_image %}
+      {% assign image_style = "pointer-events: none; show-controls:false;" %}
+      {% include page-media.html %}
 
-      {% if entry.image.type and entry.image.type == 'video' %}
-        <video style="image-rendering: pixelated"  class="entry-feature-image u-photo" autoplay="" loop="" muted="" controls>
-          <source style="image-rendering: pixelated" src="{{ entry_image }}" type="video/mp4">
-          <!-- Your browser does not support the video tag. -->
-        </video>
-      {% elsif entry.image.type and entry.image.type == 'video-link' %}
-        {% include responsive-embed url=entry_image  ratio="16:9" %}
-      {% else %}
-        <img class="entry-image u-photo" src="{{ entry_image }}" alt="">
-      {% endif %}
     {% endif %}
   </header>
   {% unless page.show_excerpts == false %}

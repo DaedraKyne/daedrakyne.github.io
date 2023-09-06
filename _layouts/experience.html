@@ -1,0 +1,109 @@
+---
+layout: page
+---
+<!-- <link rel="stylesheet" href="/assets/css/materialize.min.css"> -->
+<style>
+    .experience-item {
+    padding-top:100px;
+    min-height:150px;
+    position:relative
+    }
+    .experience-item:before,.experience-last-item:after {
+    background:#fff;
+    border:8px solid #000;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    display:inline-block;
+    content:"";
+    margin-left:1rem;
+    position:relative;
+    z-index:1;
+    left:calc(2% - 36px)
+    }
+    .experience-vertical-line {
+    width:8px;
+    background-color:#000;
+    position:absolute;
+    left:calc(2% - 5px);
+    top:0;
+    bottom:0;
+    }
+    .experience-item {
+        margin: 0;
+    }
+    
+    .experience-card-panel{
+    margin:0;
+    margin:-1rem 0 0 3rem
+    }
+    .experience-card-title {
+        margin:0;
+    }
+    .experience-card-panel {
+        background-color:rgba(255, 228, 225, 0.226);
+    }
+    .experience-card-subtitle-header {
+        display: inline;
+        padding-right: 0.5em;
+        font-weight: normal;
+        text-transform: uppercase;
+        /* margin: 1.5em 0 0.5em; */
+        padding: 0;
+        font-size: 0.75rem;
+
+    }
+    .experience-card-subtitle {
+        margin:0;
+        margin-top: 0;
+        font-size: 0.75rem;
+        background-color:rgba(255, 228, 225, 0.226);
+    }
+    .experience-item-date {
+    margin-top:-60px;
+    margin-left:4rem;
+    }
+    .experience-last-item{
+    padding-top:80px;
+    height:70px;
+    position:relative
+    }
+</style>
+
+
+<div class="container row">
+    {% assign steps = site.experience_steps | sort: 'date' | reverse %}
+    {% for step in steps %}
+    <div class="experience-item">
+        <i class="experience-vertical-line"></i>
+        <h2 class="experience-item-date">{{ step.date | date: '%m/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%Y'}}{% endif %}</h2>
+        <div class="experience-card-panel">
+            <h4 class="experience-card-title">
+                {{ step.title }}
+            </h4>
+            <div class="experience-card-subtitle">
+                {% if step.grade %}
+                    <h3 class="experience-card-subtitle-header">Mention</h3>
+                    <a style="color:pink" class="">{{ step.grade }}</a> 
+                {% endif %}
+                {% if step.skills %} 
+                    <h3 class="experience-card-subtitle-header">Skills</h3>
+                    {% for skill in step.skills %}
+                    <li style="display:inline;">
+                        <a style="color:aquamarine" class="">{{ skill }}</a>, 
+                    </li>
+                    {% endfor %}
+                    ...
+                    </ul>
+                {% endif %}
+            </div>
+            {{ step.content }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="experience-last-item">
+        <i class="experience-vertical-line"></i>
+
+    </div>
+</div>

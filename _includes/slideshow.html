@@ -1,0 +1,172 @@
+<script>
+    let slideIndex = 1;
+
+    let tries = 10;
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("page-mySlides");
+        if ((!slides || !slides.length || slides.length == 0) && slideIndex == 1 && tries > 0) {setTimeout(showSlides, 10); tries--;return;};
+        tries = -1;
+        let dots = document.getElementsByClassName("page-slides-dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            for (let child of slides[i].children) {
+                if (child.pause) {
+                    child.pause();
+                }
+            }
+        slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" page-slides-active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        for (let child of slides[slideIndex-1].children) {
+                if (child.play && child.autoplay) {
+                    child.play();
+                }
+            }
+
+        dots[slideIndex-1].className += " page-slides-active";
+    }
+    showSlides(slideIndex);
+</script>
+
+<style>
+    * {box-sizing:border-box}
+
+    /* Slideshow container */
+    .page-slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    }
+
+    /* Hide the images by default */
+    .page-mySlides {
+    display: none;
+    }
+
+    /* Next & previous buttons */
+    .page-slides-prev, .page-slides-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2 );
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .page-slides-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .page-slides-prev:hover, .page-slides-next:hover {
+    background-color: rgba(0,0,0,0.8);
+    }
+
+    /* Caption text */
+    .page-slides-caption {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .page-slides-number {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .page-slides-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+    .page-slides-active, .page-slides-dot:hover {
+    background-color: #717171;
+    }
+
+    /* Fading animation */
+    .page-slides-fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    @keyframes page-slides-fade {
+    from {opacity: .4}
+    to {opacity: 1}
+    }
+</style>
+
+{% if slideshow %}
+    <h1> Slideshow </h1>
+
+
+    <div class="page-slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        {% assign currSlide = 1 %}
+        {%- for slide in slideshow -%}
+            <div class="page-mySlides page-slides-fade">
+                <div class="page-slides-number">{{ currSlide }} / {{ slideshow.size }} </div>
+                {% assign image = slide.image %}
+                {% assign image_path = slide.image.path %}
+                {% assign image_style = "width:100%;" %}
+                {% include page-media.html %}
+                <!-- <div class="page-slides-caption">Caption Text</div> -->
+            </div>
+            {% assign currSlide = currSlide | plus: 1 %}
+        {%- endfor -%}    
+
+        <!-- Next and previous buttons -->
+        <a class="page-slides-prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="page-slides-next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        {% assign currSlide = 1 %}
+        {%- for slide in slideshow -%}
+            <span class="page-slides-dot" onclick="currentSlide({{ currSlide }})"></span>
+            {% assign currSlide = currSlide | plus: 1 %}
+        {%- endfor -%}    
+    </div>
+{% endif %}

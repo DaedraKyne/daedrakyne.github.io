@@ -10,30 +10,20 @@
   {% endunless %}
   {% assign page_image = page_image | escape %}
 
+  {% unless site.logo %}
+    {% assign image_style="margin-top: 0;" %}
+  {% endunless %}
+
 
   
   <div class="project-image">
+
+    {% assign image = page.image %}
+    {% assign image_path = page_image %}
+    {% assign image_style = "height: 400px;" %}
+    {% include page-media.html %}
+
     
-    {% if page.image.type and page.image.type == 'video'%}
-    <video style="image-rendering: pixelated"  class="entry-feature-image u-photo" autoplay="" loop="" muted="" controls>
-      <source style="image-rendering: pixelated" src="{{ page_image }}" type="video/mp4">
-      <!-- Your browser does not support the video tag. -->
-    </video>
-    {% elsif page.image.type and page.image.type == 'video-link' %}
-      {% include responsive-embed url=page_image ratio="16:9" %}
-      
-    {% else %}
-      <img src="{{ page_image }}" class="entry-feature-image u-photo" alt="{{ page.title }}" {% unless site.logo %}style="margin-top: 0;"{% endunless %}>
-
-    {% endif %}
-    {% if page.image.caption %}
-      <div class="project-image-caption">{{ page.image.caption | markdownify }}</div>
-    {% endif %}
-
-    <!-- <video style="image-rendering: pixelated"  class="entry-feature-image u-photo" autoplay="" loop="" muted="" controls>
-      <source style="image-rendering: pixelated" src="{{ page_image }}" type="video/mp4"> -->
-      <!-- Your browser does not support the video tag. -->
-    <!-- </video> -->
 
   </div>
 {% endif %}

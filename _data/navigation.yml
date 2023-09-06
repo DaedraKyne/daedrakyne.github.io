@@ -1,19 +1,17 @@
 # Sample site navigation bar links
 
-- title: Home
-  url: /
 - title: Experience
   url: /experience/
 - title: Education
   url: /education/
 - title: Projects
   url: /projects/
-- title: Skills
-  url: /skills/
-- title: Contact
-  url: /contact/
-- title: Linkedin
-  url: https://www.linkedin.com/in/sebastien-modley-1969741a7/
+# - title: Skills
+#   url: /skills/
+# - title: Contact
+#   url: /contact/
+# - title: Linkedin
+#   url: https://www.linkedin.com/in/sebastien-modley-1969741a7/
 
 # - title: Categories
 #   url: /categories/

@@ -13,12 +13,15 @@ links: [
 image:
   path: /images/pixelot.png
   thumbnail: /images/pixelot-384x231.png
+
+slideshow: [
+  {image: {path: /images/pixelot.png}},
+  {image: {path: /images/logo.jpg}},
+  
+]
 #   caption: "[Pixelot](https://github.com/SLYGM/Pixelot) engine UI"
 
 ---
 
 Game Engine written in TypeScript for fast Retro-styled game dev.<br>
-4th Year Team Project - grade: *81%*
 
-
-# Showcase

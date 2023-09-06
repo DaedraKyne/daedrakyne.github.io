@@ -11,6 +11,8 @@
     {%- assign ratio_class = 'responsive-embed-16by9' -%}
 {%- endcase -%}
 
-<div class="responsive-embed {{ ratio_class }}">
-  <iframe src="{{ include.url }}" frameborder="0" allowfullscreen></iframe>
+{% assign image_style = image_style | "" %}
+
+<div style="{{ image_style }}" class="responsive-embed {{ ratio_class }}">
+  <iframe style="{{ image_style }}" src="{{ include.url }}" frameborder="0" allowfullscreen></iframe>
 </div>

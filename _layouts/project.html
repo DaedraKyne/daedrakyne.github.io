@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 <main id="main" class="main-content" aria-label="Content">
   <article>
     {% include project-image.html %}
@@ -27,6 +28,8 @@ layout: default
       <div class="page-content">
         <div class="e-content">
           {{ content }}
+          {% assign slideshow = page.slideshow %}
+          {% include slideshow.html %}
         </div>
 
         {% if page.share %}

@@ -1,0 +1,109 @@
+---
+layout: page
+---
+<!-- <link rel="stylesheet" href="/assets/css/materialize.min.css"> -->
+<style>
+    .education-item {
+    padding-top:100px;
+    min-height:150px;
+    position:relative
+    }
+    .education-item:before,.education-last-item:after {
+    background:#fff;
+    border:8px solid #000;
+    border-radius:50%;
+    width:40px;
+    height:40px;
+    display:inline-block;
+    content:"";
+    margin-left:1rem;
+    position:relative;
+    z-index:1;
+    left:calc(2% - 36px)
+    }
+    .education-vertical-line {
+    width:8px;
+    background-color:#000;
+    position:absolute;
+    left:calc(2% - 5px);
+    top:0;
+    bottom:0;
+    }
+    .education-item {
+        margin: 0;
+    }
+    
+    .education-card-panel{
+    margin:0;
+    margin:-1rem 0 0 3rem
+    }
+    .education-card-title {
+        margin:0;
+    }
+    .education-card-panel {
+        background-color:rgba(255, 228, 225, 0.226);
+    }
+    .education-card-subtitle-header {
+        display: inline;
+        padding-right: 0.5em;
+        font-weight: normal;
+        text-transform: uppercase;
+        /* margin: 1.5em 0 0.5em; */
+        padding: 0;
+        font-size: 0.75rem;
+
+    }
+    .education-card-subtitle {
+        margin:0;
+        margin-top: 0;
+        font-size: 0.75rem;
+        background-color:rgba(255, 228, 225, 0.226);
+    }
+    .education-item-date {
+    margin-top:-60px;
+    margin-left:4rem;
+    }
+    .education-last-item{
+    padding-top:80px;
+    height:70px;
+    position:relative
+    }
+</style>
+
+
+<div class="container row">
+    {% assign steps = site.education_steps | sort: 'date' | reverse %}
+    {% for step in steps %}
+    <div class="education-item">
+        <i class="education-vertical-line"></i>
+        <h2 class="education-item-date">{{ step.date | date: '%m/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%Y'}}{% endif %}</h2>
+        <div class="education-card-panel">
+            <h4 class="education-card-title">
+                {{ step.title }}
+            </h4>
+            <div class="education-card-subtitle">
+                {% if step.grade %}
+                    <h3 class="education-card-subtitle-header">Mention</h3>
+                    <a style="color:pink" class="">{{ step.grade }}</a> 
+                {% endif %}
+                {% if step.subjects %} 
+                    <h3 class="education-card-subtitle-header">Subjects</h3>
+                    {% for subject in step.subjects %}
+                    <li style="display:inline;">
+                        <a style="color:aquamarine" class="">{{ subject }}</a>, 
+                    </li>
+                    {% endfor %}
+                    ...
+                    </ul>
+                {% endif %}
+            </div>
+            {{ step.content }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="education-last-item">
+        <i class="education-vertical-line"></i>
+
+    </div>
+</div>

@@ -11,8 +11,8 @@ links: [
 
 image:
   type: video
-  path: /images/DeepL-project-brawlhalla.mp4
-  thumbnail: /images/DeepL-project-brawlhalla.mp4
+  path: /images/logo.jpg
+  thumbnail: /images/logo.jpg
   autoplay: true
 #   caption: "[Pixelot](https://github.com/SLYGM/Pixelot) engine UI"
 

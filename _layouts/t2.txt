@@ -1,0 +1,16 @@
+    {% if image.type and image.type == 'video'%}
+    <video controls>
+      <source src="{{ image_path }}" type="video/mp4">
+      <!-- Your browser does not support the video tag. -->
+    </video>
+    {% elsif image.type and image.type == 'video-link' %}
+      {% include responsive-embed url=image_path ratio="16:9" %}
+      
+    {% else %}
+      <img src="{{ image_path }}" class="entry-feature-image u-photo" style="{{ image_style }}">
+
+    {% endif %}
+    {% if image.caption %}
+      <div class="project-image-caption">{{ image.caption | markdownify }}</div>
+    {% endif %}
+{% endif %}

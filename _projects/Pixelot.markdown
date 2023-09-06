@@ -18,7 +18,6 @@ image:
 
 slideshow: [
   {image: {path: /images/pixelot.png}},
-  {image: {path: /images/logo.jpg}},
   
 ]
 #   caption: "[Pixelot](https://github.com/SLYGM/Pixelot) engine UI"

@@ -8,8 +8,5 @@ skills: [
 
 ---
 
-<!-- ![](https://warwick.ai/_next/image?url=%2Fstatic%2Flogo2.png&w=48&q=75) -->
-
-
-
+Lead a dev team from design to MVP demo.<br>
 [Website](https://warwick.ai/)

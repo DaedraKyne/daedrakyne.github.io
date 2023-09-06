@@ -3,8 +3,8 @@
   {% assign image_style = image_style | "" %}
 
     {% if image.type and image.type == 'video'%}
-    <video style="image-rendering: pixelated; {{ image_style }}"  class="entry-feature-image u-photo" {% if image.autoplay %}autoplay loop {% endif %} muted controls>
-      <source style="image-rendering: pixelated" src="{{ image_path }}" type="video/mp4">
+    <video controls>
+      <source src="{{ image_path }}" type="video/mp4">
       <!-- Your browser does not support the video tag. -->
     </video>
     {% elsif image.type and image.type == 'video-link' %}

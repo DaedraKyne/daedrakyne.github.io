@@ -8,14 +8,6 @@ layout: page
     min-height:150px;
     position:relative
     }
-    .experience-vertical-line {
-    width:8px;
-    background-color:#000;
-    position:absolute;
-    left:calc(2% - 5px);
-    top:0;
-    bottom:0;
-    }
     .experience-item {
         margin: 0;
     }
@@ -58,9 +50,9 @@ layout: page
     <div class="experience-item">
         <h2 class="experience-item-date">{{ step.date | date: '%m/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%Y'}}{% endif %}</h2>
         <div class="experience-card-panel">
-            <h4 class="experience-card-title">
-                {{ step.title }}
-            </h4>
+            <h2 class="experience-card-title" >
+                <p style="display: inline; color:burlywood;" >{{ step.title }}</p>
+            </h2>
             <div class="experience-card-subtitle">
                 {% if step.grade %}
                     <h3 class="experience-card-subtitle-header">Mention</h3>

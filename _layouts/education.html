@@ -4,30 +4,9 @@ layout: page
 <!-- <link rel="stylesheet" href="/assets/css/materialize.min.css"> -->
 <style>
     .education-item {
-    padding-top:100px;
+    padding-top:10px;
     min-height:150px;
     position:relative
-    }
-    .education-item:before,.education-last-item:after {
-    background:#fff;
-    border:8px solid #000;
-    border-radius:50%;
-    width:40px;
-    height:40px;
-    display:inline-block;
-    content:"";
-    margin-left:1rem;
-    position:relative;
-    z-index:1;
-    left:calc(2% - 36px)
-    }
-    .education-vertical-line {
-    width:8px;
-    background-color:#000;
-    position:absolute;
-    left:calc(2% - 5px);
-    top:0;
-    bottom:0;
     }
     .education-item {
         margin: 0;
@@ -60,13 +39,7 @@ layout: page
         background-color:rgba(255, 228, 225, 0.226);
     }
     .education-item-date {
-    margin-top:-60px;
     margin-left:4rem;
-    }
-    .education-last-item{
-    padding-top:80px;
-    height:70px;
-    position:relative
     }
 </style>
 
@@ -75,7 +48,6 @@ layout: page
     {% assign steps = site.education_steps | sort: 'date' | reverse %}
     {% for step in steps %}
     <div class="education-item">
-        <i class="education-vertical-line"></i>
         <h2 class="education-item-date">{{ step.date | date: '%m/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%Y'}}{% endif %}</h2>
         <div class="education-card-panel">
             <h4 class="education-card-title">

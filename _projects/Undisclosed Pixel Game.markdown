@@ -5,7 +5,7 @@ project-type: 4th-Year Thesis Project
 categories: C# GLSL(Shader-Programming) Unity
 year: 2023
 links: [
-  {name: Final report, href: https://drive.google.com/file/d/1FEpNo7-92uGZv6gBoDTsEIz4tg0XtvTf/view?usp=drive_link}
+  {name: Final report, href: "https://drive.google.com/file/d/1FEpNo7-92uGZv6gBoDTsEIz4tg0XtvTf/view?usp=drive_link"}
 ]
 # Warning: MAKE SURELINKS DOES NOT HAVEAN EXTRA COMMA!!!! DaedraKyne
 

@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Deep Learning in Games: a deepdive into advanced AI"
+title: "Applying DeepRL AI on a competitive game"
 project-type: 3rd-Year Project
 categories: Python AI Deep-Learning
 year: "2021-2022"

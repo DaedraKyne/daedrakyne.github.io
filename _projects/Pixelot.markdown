@@ -11,17 +11,9 @@ links: [
 ]
 
 image:
-  type: video
-  path: /images/pixel-game.mp4
-  thumbnail: /images/pixel-game.mp4
+  path: /images/pixelot.png
+  thumbnail: /images/pixelot-384x231.png
   autoplay: true
-
-
-slideshow: [
-  {image: {path: /images/pixelot.png}},
-  {image: {type: video, path: /images/pixel-game.mp4, autoplay: true}},
-  
-]
 #   caption: "[Pixelot](https://github.com/SLYGM/Pixelot) engine UI"
 
 ---

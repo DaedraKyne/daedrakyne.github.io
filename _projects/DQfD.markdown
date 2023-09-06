@@ -6,13 +6,14 @@ categories: Python AI Deep-Learning
 year: "2021-2022"
 importance: 4
 links: [
-  {name: Final report, href: https://drive.google.com/file/d/1FEpNo7-92uGZv6gBoDTsEIz4tg0XtvTf/view?usp=drive_link},
+  {name: Final report, href: https://drive.google.com/file/d/1FEpNo7-92uGZv6gBoDTsEIz4tg0XtvTf/view?usp=drive_link}
 ]
+# Warning: MAKE SURELINKS DOES NOT HAVEAN EXTRA COMMA!!!! DaedraKyne
 
 image:
   type: video
-  path: /images/logo.jpg
-  thumbnail: /images/logo.jpg
+  path: /images/DeepL-project-brawlhalla.mp4
+  thumbnail: /images/DeepL-project-brawlhalla.mp4
   autoplay: true
 #   caption: "[Pixelot](https://github.com/SLYGM/Pixelot) engine UI"
 

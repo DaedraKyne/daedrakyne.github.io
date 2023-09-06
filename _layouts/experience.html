@@ -4,22 +4,9 @@ layout: page
 <!-- <link rel="stylesheet" href="/assets/css/materialize.min.css"> -->
 <style>
     .experience-item {
-    padding-top:100px;
+    padding-top:10px;
     min-height:150px;
     position:relative
-    }
-    .experience-item:before,.experience-last-item:after {
-    background:#fff;
-    border:8px solid #000;
-    border-radius:50%;
-    width:40px;
-    height:40px;
-    display:inline-block;
-    content:"";
-    margin-left:1rem;
-    position:relative;
-    z-index:1;
-    left:calc(2% - 36px)
     }
     .experience-vertical-line {
     width:8px;
@@ -60,13 +47,7 @@ layout: page
         background-color:rgba(255, 228, 225, 0.226);
     }
     .experience-item-date {
-    margin-top:-60px;
     margin-left:4rem;
-    }
-    .experience-last-item{
-    padding-top:80px;
-    height:70px;
-    position:relative
     }
 </style>
 
@@ -75,7 +56,6 @@ layout: page
     {% assign steps = site.experience_steps | sort: 'date' | reverse %}
     {% for step in steps %}
     <div class="experience-item">
-        <i class="experience-vertical-line"></i>
         <h2 class="experience-item-date">{{ step.date | date: '%m/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%Y'}}{% endif %}</h2>
         <div class="experience-card-panel">
             <h4 class="experience-card-title">

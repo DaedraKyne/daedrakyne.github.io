@@ -23,19 +23,18 @@ skin: "/assets/css/skins/dark.css" #available: light.css, default.css, dark.css
 
 title: Sebastien Modley
 email: sebmodley@gmail.com
-description:   # this means to ignore newlines until "baseurl:"
-  '
-    British-French Software Engineer, MEng Graduate and game-dev enthusiast.<br>
-    Open to new opportunities worldwide.<br>
-    sebmodley@gmail.com
-  '
+description: # this means to ignore newlines until "baseurl:"
+  "
+  British-French Software Engineer, MEng Graduate and game-dev enthusiast.<br>
+  Open to new opportunities worldwide.<br>
+  sebmodley@gmail.com
+  "
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://daedrakyne.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sebastien-modley.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 logo: "/images/logo.jpg" # path of site logo, e.g. "/assets/images/logo.png"
-github_username:  daedrakyne
+github_username: sebastien-modley
 date_format: "%Y-%m-%d"
-
 
 # Build settings
 # theme: minima
@@ -48,9 +47,9 @@ paginate: 10
 paginate_path: "/page:num/"
 
 mathjax:
-  enable: true             # MathJax equations, e.g. true, false (default)
-  combo: "tex-svg"         # "tex-svg" (default), "tex-mml-chtml", etc.
-  tags: "ams"              # "none", "ams" (default), "all"
+  enable: true # MathJax equations, e.g. true, false (default)
+  combo: "tex-svg" # "tex-svg" (default), "tex-mml-chtml", etc.
+  tags: "ams" # "none", "ams" (default), "all"
 
 # Use by replace the font name and weights across the site accordingly.
 google_fonts:
@@ -63,32 +62,26 @@ google_analytics: G-LYFQEG04DB
 
 search_full_content: true
 
-
 # category_archive_path: "/categories/#"
 # tag_archive_path: "/tags/#"
 
-
 author:
   name: Sebastien Modley
-  links: 
+  links:
     - title: GitHub
-      url: https://github.com/DaedraKyne/
-      icon: fab fa-github-square 
+      url: https://github.com/sebastien-modley/
+      icon: fab fa-github-square
     - title: Linkedin
       url: https://www.linkedin.com/in/sebastien-modley-1969741a7/
-      icon: fab fa-linkedin 
+      icon: fab fa-linkedin
   picture: /images/logo.jpg
-
 
 footer_links:
   - title: GitHub
-    url: https://github.com/DaedraKyne/
+    url: https://github.com/sebastien-modley/
     icon: fab fa-github-square
 
 copyright: "@2023 Sebastien Modley."
-
-
-
 
 collections:
   projects:
@@ -101,7 +94,6 @@ collections:
   experience_steps:
     title: "experience Steps"
     output: false
-
 
   defaults:
     # # Post defaults
@@ -122,20 +114,18 @@ collections:
         share: true
 
 defaults:
-- scope:
-    path: ''
-    type: education_steps
-  values:
-    title: 
-    date: 2016-09-01 00:00:00 -0700
-- scope:
-    path: ''
-    type: experience_steps
-  values:
-    title: 
-    date: 2016-09-01 00:00:00 -0700
-
-
+  - scope:
+      path: ""
+      type: education_steps
+    values:
+      title:
+      date: 2016-09-01 00:00:00 -0700
+  - scope:
+      path: ""
+      type: experience_steps
+    values:
+      title:
+      date: 2016-09-01 00:00:00 -0700
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -12,7 +12,7 @@
   {% else %}
     {% assign entries = entries | sort: 'date' %}
   {% endif %}
-<!-- DaedraKyne importance insert - fix to allow for year ranges -->
+<!-- Sebastien importance insert - fix to allow for year ranges -->
 {% elsif include.sort_by == 'importance' %}
   {% assign entries = entries | sort: 'importance' | reverse %}
 {% endif %}

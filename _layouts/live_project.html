@@ -1,0 +1,21 @@
+---
+layout: default_live
+---
+
+
+<main id="main" class="main-content" aria-label="Content">
+  <article>
+    <div class="page-wrapper">
+      <div class="page-content">
+        <!-- <script type="module" crossorigin src="../../assets/js/projects/firesim.js"></script> -->
+         {% if page.sim %}
+         <script type="module" crossorigin src="{{ page.sim.code }}"></script>
+         <link rel="stylesheet" href="{{page.sim.stylesheet}}">
+         {% else %}
+         no sim specified
+         {% endif %}
+        <canvas id="webgpu-canvas" class="webgpu-simulation-canvas" />
+      </div>
+    </div>
+  </article>
+</main>

@@ -1,0 +1,1 @@
+html,body{height:100%;margin:0;background-color:#000}canvas.webgpu-simulation-canvas{width:min(75vw,100vh);height:min(75vw,100vh);position:fixed;inset:0;max-width:100vw;max-height:100dvh;margin:auto;background-color:#000}h1{position:absolute;color:#ccc;margin:30px}

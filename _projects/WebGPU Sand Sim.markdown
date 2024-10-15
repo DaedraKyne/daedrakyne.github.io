@@ -1,6 +1,6 @@
 ---
 layout: live_project
-title: WebGPU Sand Sim (live demo)
+title: WebGPU Sand Sim \| live demo
 project-type: personal project
 categories: TS ReactJS WebGPU
 year: 2024

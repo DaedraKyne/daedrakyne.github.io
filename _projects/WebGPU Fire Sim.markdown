@@ -1,6 +1,6 @@
 ---
 layout: live_project
-title: WebGPU Fire Sim (live demo)
+title: WebGPU Fire Sim \| live demo
 project-type: personal project
 categories: TS ReactJS WebGPU
 year: 2024
